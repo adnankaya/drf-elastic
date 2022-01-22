@@ -19,8 +19,21 @@ python manage.py runserver
 |http://127.0.0.1:8000/s/article/linux/|	Returns article 'Installing the latest version of Ubuntu'|
 |http://127.0.0.1:8000/s/article/java/|	Returns article 'Which programming language is the best?'|
 
+### Redis
+- To display the keys that are written by django
+```bash
+ └─ λ redis-cli -n 1
+127.0.0.1:6379[1]> keys *
+# output
+1) "example:1:views.decorators.cache.cache_header..444444.en-us.UTC"
+2) "example:1:views.decorators.cache.cache_page..GET.123.123.en-us.UTC"
+
+```
+
+
 ##### Resources
 - https://testdriven.io/blog/django-drf-elasticsearch/#elasticsearch-queries
+- https://realpython.com/caching-in-django-with-redis/
 
 
 # Contact
